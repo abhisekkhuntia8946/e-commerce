@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechHub Store - Premium Electronics & Next-Gen Gadgets</title>
+  <meta name="description" content="Discover supercharged tech gadgets, laptops, audio gear, and smart home innovations with free express shipping and 30-day money-back guarantee.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span class="pill">FESTIVE SALE</span>
+    <span>Use Code <strong>TECH10</strong> for 10% OFF + FREE Express Shipping on orders over <strong>₹500</strong>! | Extra 10% Cashback on HDFC & SBI Cards</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="#" class="logo" id="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+        <span>Tech<span class="accent">Hub</span></span>
+      </a>
+
+      <!-- Live Search Bar -->
+      <div class="search-wrapper">
+        <div class="search-input-group">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="live-search-input" placeholder="Search mobiles, laptops, TVs, smartwatches, earbuds..." autocomplete="off">
+          <button class="search-clear-btn" id="header-search-clear" style="display: none;" title="Clear search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="search-dropdown" id="search-dropdown-results"></div>
+      </div>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button class="icon-btn theme-btn" id="theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        
+        <button class="icon-btn" id="open-wishlist-btn" title="Saved Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="wishlist-badge-count">0</span>
+        </button>
+
+        <button class="icon-btn" id="open-cart-btn" title="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge" id="cart-badge-count">0</span>
+        </button>
+
+        <!-- Single Clean Account Menu Button -->
+        <button class="account-menu-pill" id="open-account-drawer-btn" title="My Account Menu">
+          <div class="user-pill-avatar" id="user-pill-avatar"><i class="fa-solid fa-user"></i></div>
+          <span id="user-pill-label">Account</span>
+          <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; opacity: 0.7;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Promotional Banner -->
+    <section class="hero-section">
+      <div class="hero-card">
+        <div class="hero-content">
+          <div class="hero-tag"><i class="fa-solid fa-crown"></i> Exclusive Release 2026</div>
+          <h1 class="hero-title">ProBook Studio <br>M3 Max Edition</h1>
+          <p class="hero-subtitle">Supercharged 16-Core CPU with Liquid Retina XDR display. Engineered for visionary creators and power users.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="app.quickViewProduct(1)">
+              Shop Now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="btn-outline" onclick="app.scrollToCatalog()">
+              Explore Catalog
+            </button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="ProBook Studio M3 Max">
+            <div class="hero-floating-badge">
+              <i class="fa-solid fa-fire" style="color: #ef4444; font-size: 1.5rem;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.9rem;">Save ₹25,000 Today</strong>
+                <span style="font-size: 0.78rem; opacity: 0.8;">No-Cost EMI from ₹15,833/mo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Features Bar -->
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <div class="feature-info">
+          <h4>Free Express Shipping</h4>
+          <p>On all domestic orders over ₹500</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="feature-info">
+          <h4>2-Year Official Warranty</h4>
+          <p>Guaranteed authentic hardware</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+        <div class="feature-info">
+          <h4>30-Day Easy Returns</h4>
+          <p>Hassle-free money-back guarantee</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+        <div class="feature-info">
+          <h4>24/7 Expert Support</h4>
+          <p>Dedicated tech advisor team</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flash Sale Countdown Banner -->
+    <div class="flash-sale-banner">
+      <div class="flash-sale-title">
+        <i class="fa-solid fa-bolt" style="font-size: 1.8rem;"></i>
+        <div>
+          <h3>FESTIVE FLASH DEALS ENDING SOON!</h3>
+          <p style="opacity: 0.9; font-size: 0.9rem;">Grab up to 50% OFF on high-demand tech items + No-Cost EMI</p>
+        </div>
+      </div>
+      <div class="countdown-box">
+        <div class="timer-unit">
+          <div class="number" id="timer-hours">08</div>
+          <div class="label">Hours</div>
+        </div>
+        <span class="timer-colon">:</span>
+        <div class="timer-unit">
+          <div class="number" id="timer-minutes">45</div>
+          <div class="label">Mins</div>
+        </div>
+        <span class="timer-colon">:</span>
+        <div class="timer-unit">
+          <div class="number" id="timer-seconds">30</div>
+          <div class="label">Secs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Catalog Layout (Sidebar Filters + Products Grid) -->
+    <div class="main-layout" id="catalog-section">
+      <!-- Sidebar Filters -->
+      <aside class="sidebar-filters">
+        <div class="filter-header">
+          <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
+          <button class="btn-reset" id="reset-filters-btn">Reset All</button>
+        </div>
+
+        <!-- Product Search Filter -->
+        <div class="filter-group">
+          <h4 class="filter-title">Search Catalog</h4>
+          <div class="search-input-group sidebar-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="sidebar-search-input" placeholder="Search keywords..." autocomplete="off">
+            <button class="search-clear-btn" id="sidebar-search-clear" style="display: none;" title="Clear search">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Categories List -->
+        <div class="filter-group">
+          <h4 class="filter-title">Categories</h4>
+          <ul class="category-list" id="category-filter-list">
+            <!-- Rendered dynamically -->
+          </ul>
+        </div>
+
+        <!-- Brands List -->
+        <div class="filter-group">
+          <h4 class="filter-title">Filter by Brand</h4>
+          <div class="brand-filter-grid" id="brand-filter-list">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="filter-group">
+          <h4 class="filter-title">Max Price</h4>
+          <input type="range" class="price-range-slider" id="price-range" min="500" max="200000" step="1000" value="200000">
+          <div class="price-values">
+            <span>₹500</span>
+            <span id="price-range-label">₹2,00,000</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Content Area -->
+      <section class="products-content">
+        <!-- Top Catalog Bar -->
+        <div class="catalog-top-bar">
+          <div class="catalog-info">
+            Showing <strong id="visible-products-count">0</strong> products
+            <span id="active-search-pill" class="active-search-pill" style="display: none;">
+              <i class="fa-solid fa-magnifying-glass"></i> "<span id="active-search-query-text"></span>"
+              <button onclick="app.clearSearch()" title="Remove search filter"><i class="fa-solid fa-xmark"></i></button>
+            </span>
+          </div>
+          <div class="sort-group">
+            <label for="sort-select">Sort By:</label>
+            <select id="sort-select" class="sort-select">
+              <option value="featured">Featured / Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Testimonials / Reviews Section -->
+    <section class="testimonials-section">
+      <div class="section-header">
+        <h2>Loved by 1,00,000+ Indian Tech Enthusiasts</h2>
+        <p>Real stories from verified buyers across India</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The ProBook M3 Max arrived in under 24 hours in New Delhi! Seamless UPI payment and hassle-free GST invoice."</p>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" class="user-avatar" alt="Sarah Jenkins">
+            <div class="user-info">
+              <h5>Priya Sharma</h5>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Buyer (Mumbai)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"AeroPod Ultra's active noise cancellation is unmatched. Delivery was free since my order was over ₹500. 10/10!"</p>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" class="user-avatar" alt="Alex Rivera">
+            <div class="user-info">
+              <h5>Rahul Verma</h5>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Buyer (Bengaluru)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Super easy Cash on Delivery process, saved extra using coupon code TECH10. Will definitely buy again!"</p>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" class="user-avatar" alt="David Zhang">
+            <div class="user-info">
+              <h5>Aman Patel</h5>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Buyer (Ahmedabad)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="drawer" id="cart-drawer">
+    <div class="drawer-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Shopping Cart</h3>
+      <button class="drawer-close" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-body">
+      <!-- Free Shipping Meter -->
+      <div class="shipping-progress">
+        <div class="shipping-text" id="shipping-progress-text">Add ₹500.00 more for FREE Express Shipping</div>
+        <div class="progress-track">
+          <div class="progress-bar" id="shipping-progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Cart Items List Container -->
+      <div id="cart-items-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <div class="promo-input-group">
+        <input type="text" id="promo-code-input" placeholder="Promo Code (e.g. TECH10)">
+        <button class="btn-apply" id="apply-promo-btn">Apply</button>
+      </div>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Discount</span>
+        <span id="cart-discount" style="color: var(--success-green);">-₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Delivery Fee</span>
+        <span id="cart-shipping">₹0</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total Payable</span>
+        <span id="cart-total">₹0</span>
+      </div>
+      <button class="btn-checkout" id="start-checkout-btn">
+        Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Slide-Out Wishlist Drawer -->
+  <div class="drawer-backdrop" id="wishlist-drawer-backdrop"></div>
+  <aside class="drawer" id="wishlist-drawer">
+    <div class="drawer-header">
+      <h3><i class="fa-solid fa-heart" style="color: var(--sale-red);"></i> Saved Wishlist</h3>
+      <button class="drawer-close" id="close-wishlist-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-body" id="wishlist-items-container">
+      <!-- Rendered dynamically by app.js -->
+    </div>
+  </aside>
+
+  <!-- Quick View / Product Detail Modal -->
+  <div class="modal-backdrop" id="quick-view-modal">
+    <div class="modal-container">
+      <button class="modal-close" id="close-quickview-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quick-view-grid" id="quick-view-content">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Multi-Step Checkout Modal -->
+  <div class="modal-backdrop" id="checkout-modal">
+    <div class="modal-container" style="max-width: 680px;">
+      <button class="modal-close" id="close-checkout-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="checkout-modal-body" id="checkout-modal-content">
+        <!-- Step Indicator -->
+        <div class="checkout-steps">
+          <div class="step-item active" id="step-indicator-1">
+            <div class="step-circle">1</div>
+            <div class="step-label">Shipping</div>
+          </div>
+          <div class="step-item" id="step-indicator-2">
+            <div class="step-circle">2</div>
+            <div class="step-label">Payment</div>
+          </div>
+          <div class="step-item" id="step-indicator-3">
+            <div class="step-circle">3</div>
+            <div class="step-label">Receipt</div>
+          </div>
+        </div>
+
+        <!-- Form Step 1: Shipping Details -->
+        <form id="checkout-shipping-form">
+          <h3 style="margin-bottom: 20px; font-family: var(--font-heading);">Delivery Address (India)</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" required value="Abhisek">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" required value="Khuntia">
+            </div>
+            <div class="form-group full">
+              <label>Email Address</label>
+              <input type="email" required value="abhisek@example.com">
+            </div>
+            <div class="form-group full">
+              <label>Flat / House No. / Building / Street</label>
+              <input type="text" required value="Plot 45, Tech Park Road">
+            </div>
+            <div class="form-group">
+              <label>City / Town</label>
+              <input type="text" required value="New Delhi">
+            </div>
+            <div class="form-group">
+              <label>Pincode</label>
+              <input type="text" required value="110001">
+            </div>
+          </div>
+          <button type="button" class="btn-primary" style="width: 100%;" id="to-payment-step-btn">
+            Continue to Payment <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- Form Step 2: Payment Selector -->
+        <div id="checkout-payment-step" style="display: none;">
+          <h3 style="margin-bottom: 20px; font-family: var(--font-heading);">Select Payment Option</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+            <label style="display: flex; align-items: center; gap: 12px; padding: 14px; border: 1.5px solid var(--accent-primary); border-radius: var(--radius-sm); cursor: pointer; background: var(--bg-tertiary);">
+              <input type="radio" name="payment-method" value="upi" checked>
+              <i class="fa-solid fa-qrcode" style="font-size: 1.4rem; color: #16a34a;"></i>
+              <div>
+                <strong>UPI / QR (Google Pay, PhonePe, Paytm, BHIM)</strong>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Instant zero-fee payment via any UPI app</div>
+              </div>
+            </label>
+
+            <label style="display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); cursor: pointer;">
+              <input type="radio" name="payment-method" value="cod">
+              <i class="fa-solid fa-hand-holding-dollar" style="font-size: 1.4rem; color: #d97706;"></i>
+              <div>
+                <strong>Cash on Delivery (COD)</strong>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Pay cash or UPI at the time of delivery</div>
+              </div>
+            </label>
+
+            <label style="display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); cursor: pointer;">
+              <input type="radio" name="payment-method" value="card">
+              <i class="fa-regular fa-credit-card" style="font-size: 1.3rem; color: var(--accent-primary);"></i>
+              <div>
+                <strong>Credit / Debit Card (RuPay, Visa, Mastercard)</strong>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Includes No-Cost EMI options on major bank cards</div>
+              </div>
+            </label>
+
+            <label style="display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); cursor: pointer;">
+              <input type="radio" name="payment-method" value="netbanking">
+              <i class="fa-solid fa-building-columns" style="font-size: 1.3rem; color: #6366f1;"></i>
+              <div>
+                <strong>Net Banking (SBI, HDFC, ICICI, Axis, Kotak)</strong>
+              </div>
+            </label>
+          </div>
+          <button type="button" class="btn-primary" style="width: 100%; background: var(--success-green);" id="place-order-btn">
+            <i class="fa-solid fa-lock"></i> Place Order Now
+          </button>
+        </div>
+              <i class="fa-brands fa-apple" style="font-size: 1.3rem;"></i>
+              <strong>Apple Pay / Google Pay</strong>
+            </label>
+          </div>
+          <button type="button" class="btn-primary" style="width: 100%; background: var(--success-green);" id="place-order-btn">
+            <i class="fa-solid fa-lock"></i> Place Order Now
+          </button>
+        </div>
+
+        <!-- Step 3: Success Confirmation Receipt -->
+        <div id="checkout-success-step" style="display: none;">
+          <!-- Dynamically populated receipt -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+            <span>Tech<span class="accent">Hub</span></span>
+          </a>
+          <p>Your premier destination for next-generation technology, high-performance laptops, spatial audio, and smart home innovations.</p>
+          <div style="display: flex; gap: 12px; font-size: 1.2rem; color: var(--text-muted);">
+            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" title="Discord"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Shop Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog-section" onclick="app.filterByCategory('Laptops')">Laptops & Computers</a></li>
+            <li><a href="#catalog-section" onclick="app.filterByCategory('Audio')">Spatial Audio Gear</a></li>
+            <li><a href="#catalog-section" onclick="app.filterByCategory('Smartphones')">Smartphones 5G</a></li>
+            <li><a href="#catalog-section" onclick="app.filterByCategory('Wearables')">Smartwatches & Fitness</a></li>
+            <li><a href="#catalog-section" onclick="app.filterByCategory('Gaming')">Gaming Displays</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#">Track Order Status</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Shipping Information</a></li>
+            <li><a href="#">Official Warranty</a></li>
+            <li><a href="#">Help Center & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Join TechHub Club</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Get VIP access to flash deals & tech news.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); app.showToast('Subscribed to VIP Newsletter!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button class="btn-primary" style="padding: 10px 18px;" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechHub Store Inc. All rights reserved. Crafted for excellence.</p>
+        <div style="display: flex; gap: 16px; font-size: 1.4rem; color: var(--text-muted);">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-apple-pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login / Register Authentication Modal -->
+  <div class="modal-backdrop" id="auth-modal">
+    <div class="modal-content auth-modal-box">
+      <button class="modal-close-btn" id="close-auth-btn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-login-btn" onclick="app.switchAuthTab('login')">Log In</button>
+        <button class="auth-tab-btn" id="tab-register-btn" onclick="app.switchAuthTab('register')">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="auth-login-form" onsubmit="app.handleLoginSubmit(event)">
+        <h3 style="font-family: var(--font-heading); margin-bottom: 6px;">Welcome Back!</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Log in to access your orders, wishlist & VIP Prime benefits.</p>
+        
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 4px;">Email / Mobile</label>
+          <input type="email" id="login-email" class="review-input-field" placeholder="name@example.in" required style="margin-bottom:0;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 4px;">Password</label>
+          <input type="password" id="login-password" class="review-input-field" placeholder="••••••••" required style="margin-bottom:0;">
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; font-weight: 800;">
+          Log In to TechHub
+        </button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="auth-register-form" style="display: none;" onsubmit="app.handleRegisterSubmit(event)">
+        <h3 style="font-family: var(--font-heading); margin-bottom: 6px;">Create Account</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Join TechHub Club for free express shipping & instant cashback.</p>
+        
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 4px;">Full Name</label>
+          <input type="text" id="reg-name" class="review-input-field" placeholder="e.g. Abhisek Khuntia" required style="margin-bottom:0;">
+        </div>
+
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 4px;">Email Address</label>
+          <input type="email" id="reg-email" class="review-input-field" placeholder="name@example.in" required style="margin-bottom:0;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 4px;">Password</label>
+          <input type="password" id="reg-password" class="review-input-field" placeholder="Min 6 characters" required style="margin-bottom:0;">
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; font-weight: 800;">
+          Create Free Account
+        </button>
+      </form>
+    </div>
+  <!-- Account Menu Slide-over Drawer -->
+  <div class="drawer-backdrop" id="account-drawer-backdrop"></div>
+  <aside class="drawer account-drawer" id="account-drawer">
+    <div class="drawer-header">
+      <h3 style="font-family: var(--font-heading); display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-user-gear" style="color: var(--accent-primary);"></i> My Account
+      </h3>
+      <button class="drawer-close-btn" id="close-account-drawer-btn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="drawer-body" style="padding: 18px;">
+      <!-- Profile Info Card -->
+      <div class="drawer-profile-card">
+        <div class="user-avatar-large" id="drawer-avatar-initials">AK</div>
+        <div class="drawer-profile-info">
+          <strong id="drawer-user-name">Abhisek Khuntia</strong>
+          <span id="drawer-user-email">abhisek@techhub.in</span>
+          <span class="user-prime-badge"><i class="fa-solid fa-shield-halved"></i> VIP Prime Member</span>
+        </div>
+      </div>
+
+      <!-- Account Navigation Links -->
+      <div class="account-menu-group">
+        <button class="account-menu-item" onclick="app.openMyOrdersModal(); app.closeDrawers();">
+          <div class="menu-item-icon"><i class="fa-solid fa-box-open" style="color: #3b82f6;"></i></div>
+          <div class="menu-item-text">
+            <strong>My Orders</strong>
+            <span>Track purchases & delivery status</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-item-arrow"></i>
+        </button>
+
+        <button class="account-menu-item" onclick="app.openWishlistDrawer(); app.closeDrawers();">
+          <div class="menu-item-icon"><i class="fa-solid fa-heart" style="color: #ef4444;"></i></div>
+          <div class="menu-item-text">
+            <strong>My Wishlist</strong>
+            <span>Saved favorite products</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-item-arrow"></i>
+        </button>
+
+        <button class="account-menu-item" onclick="app.showToast('Profile & Address Settings opened');">
+          <div class="menu-item-icon"><i class="fa-solid fa-sliders" style="color: #10b981;"></i></div>
+          <div class="menu-item-text">
+            <strong>Account Settings</strong>
+            <span>Manage profile, addresses & cards</span>
+          </div>
+          <i class="fa-solid fa-chevron-right menu-item-arrow"></i>
+        </button>
+      </div>
+
+      <!-- Log Out Button -->
+      <div style="margin-top: 24px;">
+        <button class="logout-btn-styled" onclick="app.logoutUser();">
+          <i class="fa-solid fa-right-from-bracket"></i> Log Out of TechHub
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- My Orders Modal -->
+  <div class="modal-backdrop" id="my-orders-modal">
+    <div class="modal-content" style="max-width: 650px; padding: 24px;">
+      <button class="modal-close-btn" onclick="app.closeModals()"><i class="fa-solid fa-xmark"></i></button>
+      
+      <h2 style="font-family: var(--font-heading); margin-bottom: 6px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-boxes-packing" style="color: var(--accent-primary);"></i> My Orders History
+      </h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Track your active orders, invoices, and doorstep delivery progress.</p>
+
+      <div id="my-orders-list-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
